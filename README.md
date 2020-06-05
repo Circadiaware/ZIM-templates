@@ -21,11 +21,11 @@ Compared to the original template, this one brings the following changes:
 Note: if you want to host on GitHub Pages (the only way currently to avoid CORS issues), the `_resources` folder must be placed at the root of your github pages branch, and rename it to `resources` without a leading underscore, else [GitHub Pages will ignore it per Jekyll standards](https://help.github.com/en/github/working-with-github-pages/about-github-pages-and-jekyll).
 
 ## Example
-For examples of websites created using this template, see:
-* http://www.penwatch.net/morrowind_dnd_zim/
+An example of this template hosted on GitHub Pages is available here:
+* https://lrq3000.github.io/non24article/SleepNon24.html
 
 ## Adapting the template for your own use
-The template can be used as it is, but most likely you will want to make some changes. If you open the ecodiv.html file, you will see a number of comments (text between <!--  -->) with suggestions for changes to consider.
+The template can be used as it is, but most likely you will want to make some changes. If you open the ecodiv_mobile_withtoc.html file, you will see a few comments (text between <!--  -->) with suggestions for changes to consider.
 
 ## Installing the template
 
