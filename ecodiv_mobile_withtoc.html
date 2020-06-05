@@ -12,16 +12,16 @@
     <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300&subset=latin,greek,latin-ext' rel='stylesheet' type='text/css'> -->
 
     <!-- Scripts -->
-    <script type='text/javascript' src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.1.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+    <script type='text/javascript' src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
     
     <!-- !! Different stylesheets for different screen sizes. Adapt to your likening-->
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
     <link rel="stylesheet" media="screen and (min-width: 741px)" href=[% resource('style.css') %]>
     <link rel="stylesheet" media="screen and (max-width: 740px)" href=[% resource('style_mobile.css') %]>
 
 </head>
-<body>
+<body onload="$.mobile.silentScroll(window.scrollY);" <!-- fix for jquery-mobile always scrolling to top at loading, see https://stackoverflow.com/questions/15255719/jquery-mobile-prevent-scroll-to-top-before-page-transition --> > 
     
     <!-- See the Zim help file on templates for options -->
     [% options.line_breaks = 'default' %]
@@ -34,8 +34,8 @@
             <div data-role="header" data-position="fixed">
                 <a href="#nav-panel" data-icon="bars">Table of content</a> 
                 
-                <!-- !! Fill in the website title -->
-                <h1>My website title</h1> 
+                <!-- !! Fill in the website title, by default: Notebook -->
+                <h1>Notebook</h1> 
                 
                 <!-- !! Optionally, create button with custom link. To apply uncomment the next line and fill in the link (and optionally change the button and text)) -->
                 <!-- <a href="http://my.website.org" data-icon="home">Main website</a> -->
@@ -48,10 +48,10 @@
                     <span style="color:red">This page is best viewed with JavaScript enabled!</span>
                 </div>
             </noscript>
-            
+
             <!-- Page content -->
             
-            <div data-role="content">
+            <div data-role="content" class="content">
                 <!--[% FOR page IN pages %]-->
                     <h1>[% page.heading %] <a name='[% anchor(page) %]'></a></h1>
     
@@ -98,8 +98,24 @@
                         <!-- <br></br>
                         <a href="./link-to-start-page.html">Name of page</a>-->
                         
+                        <!-- Generate the links to other pages (between-pages table of contents -->
                         [% index() %]
-                        
+
+                        <!-- Current document's Table Of Contents placeholder and style, this table of content will be generated from headers in the document -->
+                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
+                        <style src="text/css">
+                        .toc-link, .toc-list-item, .toc-list-item a {
+                            /* Remove underlining for all toc entries */
+                            text-decoration: none;
+                        }
+                        .toc-link:not(.is-active-link) {
+                            /* Only leave the active toc entry (currently watched) as bold, else put text in normal weight */
+                            font-weight: normal !important;
+                        }
+                        </style>
+                        <nav class="toc js-toc relative z-1 transition--300 pa4" style="position: relative; max-width:inherit;">
+                        </nav>
+
                         <!-- !! Optionally, button which brings the user to your contact form. To enable this, remove comment mark below and fill in the link between the quoation marks after href -->
                         <!--<br></br>
                         <a title="Contact us" data-icon="info" href="" data-role="button" target="_blank">Contact us</a>-->
@@ -108,5 +124,38 @@
             </div>
         </div>
     </div>
+
+    <!-- Generate the Table Of Contents dynamically using javascript (via tocbot) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+    <script type="text/javascript">
+    var content = document.body
+    var headings = content.querySelectorAll('h1, h2, h3, h4, h5, h6, h7')
+    var headingMap = {}
+
+    Array.prototype.forEach.call(headings, function (heading) {
+      var id = heading.id ? heading.id : heading.textContent.trim().toLowerCase()
+        .split(' ').join('-').replace(/[!@#$%^&*():]/ig, '')
+      headingMap[id] = !isNaN(headingMap[id]) ? ++headingMap[id] : 0
+      if (headingMap[id]) {
+        heading.id = id + '-' + headingMap[id]
+      } else {
+        heading.id = id
+      }
+    })
+
+    tocbot.init({
+      // Where to render the table of contents.
+      tocSelector: '.js-toc',
+      // Where to grab the headings to build the table of contents.
+      contentSelector: '.content',
+      // Which headings to grab inside of the contentSelector element.
+      headingSelector: 'h1, h2, h3, h4, h5, h6',
+      // For headings inside relative or absolute positioned containers within content.
+      hasInnerContainers: true,
+      // Header levels collapsing by default
+      collapseDepth: 2,
+    });
+    </script>
+
 </body>
 </html>

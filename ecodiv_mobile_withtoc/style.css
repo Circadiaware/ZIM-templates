@@ -59,21 +59,19 @@ img {
     transform: translate3d(17em, 0px, 0px);
 }
 
+h1, h2, h3, h4, h5, h6, h7 {
+    margin-top: 1.5em;
+    margin-bottom: 0;
+}
 
+p {
+    margin: 0;
+    margin-bottom: 1.0em;
+    text-align: justify;
+    text-justify: inter-word;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.content li {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
