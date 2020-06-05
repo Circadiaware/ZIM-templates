@@ -1,5 +1,5 @@
-Ecodiv export template 4 Zim-wiki
-==============================
+Export template with a Table Of Contents for Zim Desktop Wiki
+=============================================================
 
 ## Description
 Template to export your [Zim wiki](http://www.zim-wiki.org/) notebook as a website with mobile theme. See the [Zim manual](http://zim-wiki.org/manual/Help/Export.html) for more information on exporting your notebook. 
