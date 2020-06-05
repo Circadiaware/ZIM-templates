@@ -1,4 +1,4 @@
-Export template with a Table Of Contents for Zim Desktop Wiki
+HTML export template with a Table Of Contents for Zim Desktop Wiki
 =============================================================
 
 ## Description
