@@ -31,7 +31,7 @@ The template can be used as it is, but most likely you will want to make some ch
 ## Installing the template
 
 1. Download the files 
-2. Copy or move the `ecodiv_mobile_withtoc.html` and `ecodiv_mobile_withtoc` folder from there to the ~/.local/share/zim/templates/html on Linux, else on Windows open Zim Notes, click on Edit > Templates, then click on the Browse button at the bottom. This will create a new folder and open it in a window of the Windows Explorer. In this folder, create a subfolder `html`, then inside place the content of this github repository.
+2. Copy or move the `ecodiv_mobile_withtoc.html` and `ecodiv_mobile_withtoc` folder from there to the ~/.local/share/zim/templates/html on Linux, else on Windows open Zim Notes, click on Edit > Templates, then click on the Browse button at the bottom. This will create a new folder and open it in a window of the Windows Explorer (likely in `%AppData%\Roaming\zim\data\zim\templates`). In this folder, create a subfolder `html`, then inside place the content of this github repository.
 
 ### Note
 * You do not need to move the ecodiv.html and ecodiv folder to the ~/.local/share/zim/templates/html folder. It is convenient as it makes the template available through the drop down menu (File --> Export) and it is available through Edit --> Template. However, when exporting you can always select a template from any location on your computer. So, if you copy the ecodiv.html and ecodiv folder to e.g., your Documents folder, you can then select the ecodiv.html from there using File --> Export menu.
