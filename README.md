@@ -15,9 +15,9 @@ Compared to the original template, this one brings the following changes:
 * a dynamic table of contents based on the headers in the document's content, thanks to [tocbot](https://tscanlin.github.io/tocbot/).
 * can now link to any header (so it's possible to share a direct link to a (sub-)section in a document)
 * updated jquery and jquery-mobile libraries.
-* improved CSS with more natural margins and justified text.
+* improved CSS with more natural margins and justified text and headers styles.
 * compatibility with static site hosters, such as GitHub Pages, such as linking libraries with https instead of http.
-* default title is "Notebook" instead of "My website title".
+* default title is "Notebook - %pagetitle%" instead of "My website title" (but it can of course be changed to your liking in the sourcecode).
 
 Note: if you want to host on GitHub Pages (the only way currently to avoid CORS issues), the `_resources` folder must be placed at the root of your github pages branch, and rename it to `resources` without a leading underscore, else [GitHub Pages will ignore it per Jekyll standards](https://help.github.com/en/github/working-with-github-pages/about-github-pages-and-jekyll).
 
