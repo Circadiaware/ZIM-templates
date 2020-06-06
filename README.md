@@ -13,6 +13,7 @@ This template is based on the [ecodiv-mobile](https://github.com/ecodiv/ZIM-temp
 
 Compared to the original template, this one brings the following changes:
 * a dynamic table of contents based on the headers in the document's content, thanks to [tocbot](https://tscanlin.github.io/tocbot/).
+* can now link to any header (so it's possible to share a direct link to a (sub-)section in a document)
 * updated jquery and jquery-mobile libraries.
 * improved CSS with more natural margins and justified text.
 * compatibility with static site hosters, such as GitHub Pages, such as linking libraries with https instead of http.
