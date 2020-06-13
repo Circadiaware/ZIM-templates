@@ -182,6 +182,13 @@
       // Header levels collapsing by default
       collapseDepth: 2,
     });
+
+    <!-- ensure the window is scrolled to the anchor after the page finished loading (else jquery may scroll back to top, particularly on mobile) -->
+    document.addEventListener('DOMContentLoaded', function() {
+        anchor = window.top.location.hash;
+        anchor = anchor.split("#").pop();
+        jumpToAnchor(anchor);
+    }, false);
     </script>
 
 </body>
