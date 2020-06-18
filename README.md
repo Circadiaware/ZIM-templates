@@ -16,10 +16,16 @@ Compared to the original template, this one brings the following changes:
 * can now link to any header (so it's possible to share a direct link to a (sub-)section in a document)
 * updated jquery and jquery-mobile libraries.
 * improved CSS with more natural margins and justified text and headers styles.
-* compatibility with static site hosters, such as GitHub Pages, such as linking libraries with https instead of http.
-* default title is "Notebook - %pagetitle%" instead of "My website title" (but it can of course be changed to your liking in the sourcecode).
+* compatibility with static site hosters, such as GitHub Pages.
+* link libraries using https instead of http (increased security and necessary for compatibility with static site hosters).
+* default title is "Notebook - %pagetitle%" instead of "My website title" (but it can of course be changed to your liking in the sourcecode), this improves SEO by default.
 
-Note: if you want to host on GitHub Pages (the only way currently to avoid CORS issues), the `_resources` folder must be placed at the root of your github pages branch, and rename it to `resources` without a leading underscore, else [GitHub Pages will ignore it per Jekyll standards](https://help.github.com/en/github/working-with-github-pages/about-github-pages-and-jekyll).
+Note: if you want to host on GitHub Pages (the only way currently to avoid CORS issues), the `_resources` folder must be placed at the root of your github pages branch, and rename it to `resources` without a leading underscore, else [GitHub Pages will ignore it per Jekyll standards](https://help.github.com/en/github/working-with-github-pages/about-github-pages-and-jekyll). You must also manually modify the headers of the exported HTML notes, to link to the `resources` folder at the root of the repo instead of inside the `%page%_files/_resources` folder, so this is what you should get after manually editing:
+
+```html
+    <link rel="stylesheet" media="screen and (min-width: 741px)" href=./resources/style.css>
+    <link rel="stylesheet" media="screen and (max-width: 740px)" href=./resources/style_mobile.css>
+```
 
 ## Example
 An example of this template hosted on GitHub Pages is available here:
