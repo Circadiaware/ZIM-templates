@@ -20,7 +20,7 @@ Compared to the original template, this one brings the following changes:
 * link libraries using https instead of http (increased security and necessary for compatibility with static site hosters).
 * default title is "Notebook - %pagetitle%" instead of "My website title" (but it can of course be changed to your liking in the sourcecode), this improves SEO by default.
 
-Note: if you want to host on GitHub Pages (the only way currently to avoid CORS issues), the `_resources` folder must be placed at the root of your github pages branch, and rename it to `resources` without a leading underscore, else [GitHub Pages will ignore it per Jekyll standards](https://help.github.com/en/github/working-with-github-pages/about-github-pages-and-jekyll). You must also manually modify the headers of the exported HTML notes, to link to the `resources` folder at the root of the repo instead of inside the `%page%_files/_resources` folder, so this is what you should get after manually editing:
+Note: if you want to host on GitHub Pages (the only way currently to avoid CORS issues) or any Jekyll-style static site hoster, the `_resources` folder must be placed at the root of your github pages branch, and rename it to `resources` without a leading underscore, else [GitHub Pages will ignore it per Jekyll standards](https://help.github.com/en/github/working-with-github-pages/about-github-pages-and-jekyll). You must also manually modify the headers of the exported HTML notes, to link to the `resources` folder at the root of the repo instead of inside the `%page%_files/_resources` folder, so this is what you should get after manually editing:
 
 ```html
     <link rel="stylesheet" media="screen and (min-width: 741px)" href=./resources/style.css>
