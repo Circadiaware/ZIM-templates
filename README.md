@@ -37,15 +37,15 @@ The template can be used as it is, but most likely you will want to make some ch
 ## Installing the template
 
 1. Download the files 
-2. Copy or move the `ecodiv_mobile_withtoc.html` and `ecodiv_mobile_withtoc` folder from there to the ~/.local/share/zim/templates/html on Linux, else on Windows open Zim Notes, click on Edit > Templates, then click on the Browse button at the bottom. This will create a new folder and open it in a window of the Windows Explorer (likely in `%AppData%\Roaming\zim\data\zim\templates`). In this folder, create a subfolder `html`, then inside place the content of this github repository.
+2. Copy or move the `ecodiv_mobile_withtoc.html` and `ecodiv_mobile_withtoc` folder from there to the `~/.local/share/zim/templates/html` on Linux, else on Windows open Zim Notes, click on Edit > Templates, then click on the Browse button at the bottom. This will create a new folder and open it in a window of the Windows Explorer (likely in `%AppData%\Roaming\zim\data\zim\templates`). In this folder, create a subfolder `html`, then place inside the content of this github repository.
 
 ### Note
-* You do not need to move the ecodiv.html and ecodiv folder to the ~/.local/share/zim/templates/html folder. It is convenient as it makes the template available through the drop down menu (File --> Export) and it is available through Edit --> Template. However, when exporting you can always select a template from any location on your computer. So, if you copy the ecodiv.html and ecodiv folder to e.g., your Documents folder, you can then select the ecodiv.html from there using File --> Export menu.
+* You do not need to move the `ecodiv.html` and `ecodiv` folder to the `~/.local/share/zim/templates/html` folder. It is convenient as it makes the template available through the drop down menu (File --> Export) and it is available through Edit --> Template. However, when exporting you can always select a template from any location on your computer. So, if you copy the `ecodiv.html` and `ecodiv` folder to e.g., your Documents folder, you can then select the `ecodiv.html` from there using the `File --> Export` menu.
 
-* But whatever solution you go for, just make sure to copy the folder ecodiv to the same folder as the ecodiv.html file, otherwise the result will not be as intended.
+* But whatever solution you go for, just make sure to copy the folder `ecodiv` to the same folder as the `ecodiv.html` file, otherwise the result will not be as intended as the linked libraries and stylesheets will be missing.
 
 ### Issues
-When you run the website from your computer in Chrome and click on a link, you may see the message "cannot load page". You can however open the link in a new tab using the context menu (right click). This is only a problem when running the website from your computer (i.e., when using the file:/// protocol). It will run without problem from your webserver (i.e., when using the http:// protocol).
+When you run the website from your computer in Chrome and click on a link, you may see the message "cannot load page". You can however open the link in a new tab using the context menu (right click). This is only a problem when running the website from your computer (i.e., when using the `file:///` protocol). It will run without problem from your webserver (i.e., when using the `http://` protocol).
 
 The problem is that Chrome does not seem to handle Ajax based links used in JqueryMobile when running from the local computer. This is mainly a problem when you want to test or further develop your website from your computer using Chrome. 
 This issue maybe solved in future releases of jquerymobile, but for now the easiest solution is to use Firefox instead. And if you have few links only, you can remedy this by adding rel="external" as an attribute into the link anchor tag. For example:
