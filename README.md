@@ -27,9 +27,13 @@ Note: if you want to host on GitHub Pages (the only way currently to avoid CORS 
     <link rel="stylesheet" media="screen and (max-width: 740px)" href=./resources/style_mobile.css>
 ```
 
+## Dark mode
+
+Although dark mode is not natively implemented, the template is fully compatible with the open-source Dark Reader browser extension (available on Chrome and Firefox).
+
 ## Example
-An example of this template hosted on GitHub Pages is available here:
-* https://lrq3000.github.io/non24article/SleepNon24.html
+This template is used by the following self-published e-book:
+* https://circadiaware.github.io/VLiDACMel-entrainment-therapy-non24/SleepNon24VLiDACMel.html
 
 ## Adapting the template for your own use
 The template can be used as it is, but most likely you will want to make some changes. If you open the ecodiv_mobile_withtoc.html file, you will see a few comments (text between <!--  -->) with suggestions for changes to consider.
