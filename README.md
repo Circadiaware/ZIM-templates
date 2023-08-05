@@ -29,7 +29,7 @@ Note: if you want to host on GitHub Pages (the only way currently to avoid CORS 
 
 ## Dark mode
 
-Although dark mode is not natively implemented, the template is fully compatible with the open-source Dark Reader browser extension (available on Chrome and Firefox).
+Although dark mode is not natively implemented, the template is fully compatible with the open-source [Dark Reader](https://github.com/darkreader/darkreader) browser extension (available on Chrome and Firefox).
 
 ## Example
 This template is used by the following self-published e-book:
