@@ -1,5 +1,7 @@
-HTML export template with a linkable Table Of Contents for Zim Desktop Wiki, ideal for e-books with chapters 📖
-===============================================================================================================
+EcoDiv Mobile With TOC HTML export template for Zim Desktop Wiki
+================================================================
+
+HTML export template with a linkable Table Of Contents for Zim Desktop Wiki, ideal for e-books with chapters 📖!
 
 ## Description
 Template to export your [Zim wiki](http://www.zim-wiki.org/) notebook as a website with a design that automatically resizes on mobile. It has an automatic Table Of Content generated from the titles levels, and adds links anchors to each section and subsection, so that it is easy to share a link to a specific section.
