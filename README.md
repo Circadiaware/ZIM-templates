@@ -2,9 +2,11 @@ HTML export template with a Table Of Contents for Zim Desktop Wiki
 =============================================================
 
 ## Description
-Template to export your [Zim wiki](http://www.zim-wiki.org/) notebook as a website with mobile theme. See the [Zim manual](http://zim-wiki.org/manual/Help/Export.html) for more information on exporting your notebook. 
+Template to export your [Zim wiki](http://www.zim-wiki.org/) notebook as a website with a design that automatically resizes on mobile. It has an automatic Table Of Content generated from the titles levels, and adds links anchors to each section and subsection, so that it is easy to share a link to a specific section.
 
-The template uses jquery and jquerymobile to create responsive webpages with an index and a table of contents in a side panel. It is a mobile-first design which however also looks good on your desktop. The template offers some pointers in the sourcecode to customize the design to fit the users need.  
+The template uses jquery and jquerymobile to create responsive webpages with an index and a table of contents in a side panel. It is a mobile-first design which however also looks good on your desktop. The template offers some pointers in the sourcecode to customize the design to fit the users need.
+
+See the [Zim manual](http://zim-wiki.org/manual/Help/Export.html) for more information on how to export your notebook. 
 
 ## Version
 This template works with Zim 0.67 and maybe also with 0.61.
